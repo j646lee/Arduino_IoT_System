@@ -1,7 +1,7 @@
 # Arduino_IoT_System
 
 
-This Arduino-powered environmental monitor collects real-time temperature, soil moisture, and ambient light data using a TMP36 sensor, soil probe, and LDR with resistor divider, with readings averaged, converted (°C and %), and streamed as CSV over Serial for easy logging or dashboarding. I designed and wired the sensor stack (TMP36 with decoupling, LDR divider, soil probe path), wrote the firmware to handle sampling, conversions, calibration, and mapping, and implemented alert logic with an LED indicator whenever values left safe ranges (15–30 °C, 30–70 % soil). The system was verified in Tinkercad. 
+In this project, I was specifically responsible for the sensor code. I implemented the routines to read raw values from the TMP36 temperature sensor, soil moisture probe, and LDR-resistor divider, then handled calibration and mapping to human-readable units (°C and %). I also wrote the averaging logic to smooth noisy readings, structured the output into CSV format for logging/dashboarding, and added threshold-based alert logic that triggered an LED whenever sensor values moved outside safe ranges (15–30 °C for temperature, 30–70 % for soil moisture). This part of the firmware ensured reliable, interpretable sensor data for the rest of the system.
 
 # Components
 - **Arduino Uno** – microcontroller  
